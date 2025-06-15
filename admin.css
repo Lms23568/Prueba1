@@ -1,0 +1,34 @@
+/* admin.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+input, textarea, button {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+#carList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.car-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  width: 200px;
+}
+
+.car-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}

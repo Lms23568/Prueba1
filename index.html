@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GarajeTico</title>
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body>
+  <header>
+    <img src="recurs/logo.jpg" alt="GarajeTico Logo" class="logo" />
+    <h1>GarajeTico</h1>
+    
+  <!-- Sección de filtros y buscador -->
+  <section id="filters">
+    <input type="text" id="searchInput" placeholder="Buscar por modelo o descripción..." />
+    <input type="number" id="minPrice" placeholder="Precio mínimo" />
+    <input type="number" id="maxPrice" placeholder="Precio máximo" />
+    <button class="Filtrar"onclick="applyFilters()">Filtrar</button>
+  </section>
+
+  </header>
+
+  <!-- Marketplace: aquí se mostrarán los autos -->
+  <div id="marketplace" class="grid"></div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <div class="carousel">
+        <button id="prevBtn">&#10094;</button>
+        <img id="modalImage" src="" alt="Imagen del carro" />
+        <button id="nextBtn">&#10095;</button>
+      </div>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <p id="modalPrice"></p>
+      <a id="wpLink" target="_blank">
+        <button class="wp-btn">Consultar por WhatsApp</button>
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin - GarajeTico</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #adminPanel { display: none; padding: 20px; }
+    .car-item { margin: 10px 0; border: 1px solid #ccc; padding: 10px; border-radius: 5px; }
+    .car-item img { max-width: 100px; }
+    input, textarea { display: block; margin-bottom: 10px; padding: 8px; width: 100%; max-width: 400px; }
+  </style>
+</head>
+<body>
+  <h1>Panel de Administración</h1>
+
+  <section id="loginSection">
+    <p>Contraseña de administrador:</p>
+    <input type="password" id="adminPassword" placeholder="Contraseña" />
+    <button onclick="login()">Ingresar</button>
+    <p id="loginMsg" style="color: red;"></p>
+  </section>
+
+  <section id="adminPanel">
+    <button id="logoutBtn">Cerrar sesión</button>
+
+    <h2>Agregar nuevo auto</h2>
+    <input type="text" id="title" placeholder="Título" />
+    <textarea id="description" placeholder="Descripción"></textarea>
+    <input type="number" id="price" placeholder="Precio" />
+    <input type="file" id="imagesInput" multiple accept="image/*" />
+    <button id="saveCarBtn">Guardar Auto</button>
+
+    <h2>Lista de Autos</h2>
+    <div id="carList"></div>
+  </section>
+
+  <script src="admin.js"></script>
+</body>
+</html>
